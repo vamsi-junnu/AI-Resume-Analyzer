@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Resume Analysis</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Resume Analyzer</h1>
+
+<h2>ATS Score</h2>
+
+<h3>{{ score }}%</h3>
+
+<hr>
+
+<h2>Detected Skills</h2>
+
+<ul>
+
+{% for skill in skills %}
+
+<li>{{ skill }}</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h2>Resume Text</h2>
+
+<pre>{{ text }}</pre>
+
+</div>
+
+</body>
+
+</html>
